@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Preços Spazio Vita</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/html2canvas.js"></script>
+	<script src="js/canvas2img.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body ng-app="MyApp" ng-controller="MyCtrl" ng-init="initApp()" ng-cloak>
+		
+	
+	<div ng-class='{pagePrint: printeable}' class="page" size='A4'>
+		<ul>
+			<li ng-repeat='t in prices'>
+				<h4>[[t.nome]]</h4>
+				<p>[[t.desc]]</p>
+				<small>A partir de R$[[t.preco]],00</small>
+			</li>
+		</ul>
+		<h6>Mayday</h6>
+	</div>
+	<div ng-class='{hidden: printeable}' class="menu">
+	<h4>Adicionar Tratamento</h4>
+		<form role="form" ng-submit='addTrat()'>
+		  <div class="form-group">
+		    <label for="email">Nome</label>
+		    <input type="text" name='nome' class="form-control" ng-model="nome">
+		  </div>
+		  <div class="form-group">
+		    <label for="pwd">Descrição:</label>
+		    <textarea name="desc" class="form-control" ng-model="desc"></textarea>
+		  </div>
+		  <div class="form-group">
+		    <label for="email">Preço</label>
+		    <input type="number" name='preco' class="form-control" ng-model="preco">
+		  </div>
+
+		  <button type="submit" class="btn btn-default">Adicionar</button>
+		</form>
+	</div>
+<button id='btnSave' class='btn btn-success'>Salvar Imagem</button>
+
+<a id="download" href='' download='' style="display:none;"></a>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+  background: rgb(204,204,204); 
+}
+.pagePrint{
+  width: 21cm;
+  height: 29.7cm;
+  display: block !important;
+  margin: 0 auto !important;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.2);
+}
+.page{
+  margin-top: 10px;
+  background: #CBF1EA;
+  background: blue;
+  width: 21cm;
+  height: 29.7cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.2);
+  display: inline-block;
+  margin-left:50px;
+}
+.menu{
+  float: left;
+  display: inline-block;
+  margin-left: 50px;
+  margin-top: 15px;
+}
+#btnSave{
+  margin-top: 35px;
+  margin-right: 50px;
+  float: right;
+}
+@media print {
+  body, .page{
+    margin: 0;
+    box-shadow: 0;
+  }
+}
