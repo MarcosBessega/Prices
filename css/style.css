@@ -17,6 +17,8 @@ body {
   box-shadow: 0 0 0.5cm rgba(0,0,0,0.2);
 }
 .page{
+  background: url("../bck.png") no-repeat center !important;
+  background-position: bottom !important;
   background-size: 100%;
   color: #323232;
   border: 1px solid #323232;
@@ -57,12 +59,12 @@ body {
 
 .header{
   background-size: 100%;
-  background: #F2F2F2;
+  background: #323232;
+  color:#F9F9F9;
   position: absolute;
   top: 10;
   height: 55px;
   width: 595px;
-  border-bottom: 4px ridge #323232;
 }
 
 .header h2{
@@ -81,7 +83,11 @@ body {
   padding: 0;
 }
 
-ul {
+ul{
+  text-align: left;
+}
+
+ul#elements {
   margin-top: 55px !important;
     height: 742px;
     width: 595px;
@@ -90,7 +96,7 @@ ul {
     padding-right: 15px !important;
 }
 
-ul > li {
+ul#elements > li {
   float:left;
   width:33.3333%;
   list-style: none;
@@ -98,19 +104,21 @@ ul > li {
   text-align: center;
 }
 
-li p{
+ul#elements li p{
+  color: black;
+  word-break: break-all;
   font-size: 12px;
   margin-bottom: 0;
   line-height: 1.1;
 }
 
-li small{
+ul#elements li small{
   font-size: 13px;
   font-weight: bold;
   color: #205A2A;
 }
 
-li h4{
+ul#elements li h4{
   font-size:14px;
   font-weight: bold;
   margin: 4px;

@@ -26,11 +26,11 @@
 				</div>
 			</div>
 		</div>
-		<ul>
+		<ul id='elements'>
 			<li ng-repeat='t in prices'>
 				<h4>[[t.nome]]</h4>
 				<p ng-bind-html="t.desc"></p>
-				<small>A partir de R$[[t.preco]],00</small>
+				<small ng-if='t.preco'>A partir de R$[[t.preco]],00</small>
 			</li>
 		</ul>
 	</div>
